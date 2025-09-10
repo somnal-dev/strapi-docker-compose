@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "borads",
+  "info": {
+    "singularName": "borad",
+    "pluralName": "borads",
+    "displayName": "BORAD"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    }
+  }
+}
