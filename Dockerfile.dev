@@ -1,0 +1,27 @@
+FROM node:22-alpine
+# Installing libvips-dev for sharp Compatibility
+RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
+
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+
+WORKDIR /opt/app
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn ./.yarn
+
+# Yarn Berry 설정
+RUN corepack enable
+RUN yarn set version berry
+RUN yarn install
+
+# 소스 코드 복사
+COPY . .
+
+RUN chown -R node:node /opt/app
+USER node
+
+# 개발 환경에서는 빌드 필요시만
+# RUN yarn build
+
+EXPOSE 1337
+CMD ["yarn", "develop"]

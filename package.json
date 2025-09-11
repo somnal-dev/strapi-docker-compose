@@ -37,5 +37,6 @@
   "strapi": {
     "uuid": "c2ac88c8-b951-4267-9f7c-8720b723cdaa",
     "installId": "73b5cff779f42a4cfb97001c67699ffce5192e9addb593953c998fffbb651a09"
-  }
+  },
+  "packageManager": "yarn@4.9.4"
 }

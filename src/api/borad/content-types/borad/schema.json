@@ -4,7 +4,7 @@
   "info": {
     "singularName": "borad",
     "pluralName": "borads",
-    "displayName": "BORAD"
+    "displayName": "Board"
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +13,9 @@
   "attributes": {
     "content": {
       "type": "text"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

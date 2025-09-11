@@ -376,7 +376,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiBoradBorad extends Struct.CollectionTypeSchema {
   collectionName: 'borads';
   info: {
-    displayName: 'BORAD';
+    displayName: 'Board';
     pluralName: 'borads';
     singularName: 'borad';
   };
@@ -392,6 +392,7 @@ export interface ApiBoradBorad extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::borad.borad'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
